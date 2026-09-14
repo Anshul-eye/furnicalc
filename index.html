@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FurniCalc | Furniture Design Calculator</title>
+  <meta name="description" content="Open-source furniture dimension and material calculation tools for designers and woodworkers.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <div class="brand">Furni<span>Calc</span></div>
+      <a href="#tools">Tools</a>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">OPEN-SOURCE • FURNITURE DESIGN</p>
+      <h1>Calculate smarter.<br>Design better.</h1>
+      <p>Simple calculation tools for furniture designers, makers and woodworkers.</p>
+      <a class="button" href="#tools">Explore Tools</a>
+    </div>
+  </header>
+
+  <main id="tools">
+    <section class="intro">
+      <p class="eyebrow">FURNICALC TOOLS</p>
+      <h2>Essential tools for everyday furniture design</h2>
+    </section>
+
+    <section class="tools-grid">
+      <article class="card">
+        <div class="icon">↔</div>
+        <h3>Unit Converter</h3>
+        <p>Convert dimensions between millimetres and inches.</p>
+        <div class="inputs">
+          <label>Millimetres
+            <input id="mmInput" type="number" placeholder="Enter mm">
+          </label>
+          <button onclick="convertMm()">Convert to Inches</button>
+          <div class="result" id="inchResult">Result will appear here</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="icon">▦</div>
+        <h3>Wood Volume Calculator</h3>
+        <p>Calculate material volume for panels and solid wood pieces.</p>
+        <div class="inputs">
+          <label>Length (mm)<input id="length" type="number" placeholder="1200"></label>
+          <label>Width (mm)<input id="width" type="number" placeholder="600"></label>
+          <label>Thickness (mm)<input id="thickness" type="number" placeholder="18"></label>
+          <button onclick="calculateVolume()">Calculate Volume</button>
+          <div class="result" id="volumeResult">Result will appear here</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="icon">▱</div>
+        <h3>Sofa Width Calculator</h3>
+        <p>Estimate a comfortable sofa width based on seating capacity.</p>
+        <div class="inputs">
+          <label>Number of Seats
+            <input id="seats" type="number" min="1" max="10" placeholder="3">
+          </label>
+          <label>Width per Person (mm)
+            <input id="perPerson" type="number" value="580">
+          </label>
+          <button onclick="calculateSofa()">Calculate Width</button>
+          <div class="result" id="sofaResult">Result will appear here</div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <section class="about">
+    <p class="eyebrow">BUILT FOR MAKERS</p>
+    <h2>Free, simple and open source.</h2>
+    <p>FurniCalc is an evolving collection of practical calculation tools. Contributions and suggestions are welcome.</p>
+  </section>
+
+  <footer>
+    <div>© 2026 FurniCalc</div>
+    <div>Open Source Furniture Tools</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
